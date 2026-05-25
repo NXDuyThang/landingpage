@@ -1,0 +1,144 @@
+@import "tailwindcss";
+
+@theme {
+  --color-accent: var(--accent);
+  --color-accent-emerald: var(--accent-emerald);
+  --color-neon-blue: var(--accent);
+  --color-neon-green: var(--accent-emerald);
+  --color-theme-bg: var(--background);
+  --color-theme-fg: var(--foreground);
+  --color-theme-card: var(--card-bg);
+  --color-theme-border: var(--card-border);
+  --font-sans: var(--font-geist-sans), Inter, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), monospace;
+}
+
+:root {
+  --background: #f8fafc;
+  --foreground: #0f172a;
+  --accent: #0284c7;
+  --accent-emerald: #059669;
+  --card-bg: #ffffff;
+  --card-border: #e2e8f0;
+  --card-hover-shadow: rgba(2, 132, 199, 0.12);
+  --nav-bg: rgba(248, 250, 252, 0.85);
+  --nav-border: rgba(226, 232, 240, 0.6);
+  --scrollbar-track: #f1f5f9;
+  --scrollbar-thumb: linear-gradient(180deg, #0284c7, #059669);
+  --text-muted: #475569;
+}
+
+html.dark {
+  --background: #030712;
+  --foreground: #f3f4f6;
+  --accent: #00f3ff;
+  --accent-emerald: #10b981;
+  --card-bg: #0b0f19;
+  --card-border: #1e293b;
+  --card-hover-shadow: rgba(0, 243, 255, 0.2);
+  --nav-bg: rgba(3, 7, 18, 0.75);
+  --nav-border: rgba(30, 41, 59, 0.5);
+  --scrollbar-track: #030712;
+  --scrollbar-thumb: linear-gradient(180deg, #00f3ff, #10b981);
+  --text-muted: #94a3b8;
+}
+
+/* Base resets & adjustments */
+html {
+  scroll-behavior: smooth;
+  background-color: var(--background);
+  color: var(--foreground);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  position: relative;
+  overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Premium micro-noise overlay for a technical/organic texture */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 999;
+  opacity: 0.18;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.07'/%3E%3C/svg%3E");
+}
+
+/* Modern Glowing scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 99px;
+}
+
+/* Glowing Neon border animations & utilities */
+.glow-card {
+  position: relative;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glow-card::after {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background: linear-gradient(135deg, var(--accent), var(--accent-emerald));
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.glow-card:hover {
+  transform: translateY(-4px);
+  border-color: transparent;
+  box-shadow: 0 10px 30px -10px var(--card-hover-shadow);
+}
+
+.glow-card:hover::after {
+  opacity: 0.5;
+}
+
+/* Glassmorphism nav classes */
+.glass-nav {
+  background: var(--nav-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--nav-border);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Shimmer buttons */
+.shimmer-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.shimmer-btn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.15);
+  transform: skewX(-20deg);
+  transition: left 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.shimmer-btn:hover::after {
+  left: 160%;
+}
