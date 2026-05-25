@@ -220,7 +220,7 @@ export default function Contact() {
 
                 {submitSuccess && (
                   <div className="p-3 text-center rounded-xl bg-emerald-50/50 dark:bg-emerald-950/20 border border-emerald-200 dark:border-emerald-500/30 text-emerald-700 dark:text-emerald-400 text-xs font-sans animate-fade-in transition-colors">
-                    ✓ Cảm ơn đã gửi liên hệ
+                    ✓ Cảm ơn đã gửi liên hệ.
                   </div>
                 )}
 
