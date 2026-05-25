@@ -96,6 +96,8 @@ export default function Projects() {
                       {project.liveUrl && project.liveUrl !== "#" && (
                         <a
                           href={project.liveUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
                           className="text-zinc-500 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors"
                           aria-label="View live project demo"
                         >
@@ -107,7 +109,13 @@ export default function Projects() {
 
                   {/* Title & Tagline */}
                   <h3 className="font-sans font-bold text-lg text-zinc-900 dark:text-white mb-3 group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors duration-300">
-                    {project.title}
+                    {project.liveUrl && project.liveUrl !== "#" ? (
+                      <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="hover:underline inline-flex items-center gap-1">
+                        {project.title}
+                      </a>
+                    ) : (
+                      project.title
+                    )}
                   </h3>
                   
                   <p className="text-zinc-600 dark:text-zinc-400 text-xs leading-relaxed mb-6 font-light transition-colors">

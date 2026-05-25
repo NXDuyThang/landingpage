@@ -13,20 +13,38 @@ export default function Contact() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState<boolean | null>(null);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setSubmitSuccess(null);
+    setErrorMessage(null);
     
-    // Simulate API Submission
-    setTimeout(() => {
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formState),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setSubmitSuccess(true);
+        setFormState({ name: "", email: "", subject: "", message: "" });
+        // Reset success status after a few seconds
+        setTimeout(() => setSubmitSuccess(null), 5000);
+      } else {
+        setErrorMessage(data.error || "Có lỗi xảy ra. Vui lòng thử lại sau.");
+      }
+    } catch (error) {
+      setErrorMessage("Không thể kết nối với cơ sở dữ liệu. Vui lòng kiểm tra lại đường truyền mạng.");
+    } finally {
       setIsSubmitting(false);
-      setSubmitSuccess(true);
-      setFormState({ name: "", email: "", subject: "", message: "" });
-      
-      // Reset success status after a few seconds
-      setTimeout(() => setSubmitSuccess(null), 5000);
-    }, 1500);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -202,7 +220,13 @@ export default function Contact() {
 
                 {submitSuccess && (
                   <div className="p-3 text-center rounded-xl bg-emerald-50/50 dark:bg-emerald-950/20 border border-emerald-200 dark:border-emerald-500/30 text-emerald-700 dark:text-emerald-400 text-xs font-sans animate-fade-in transition-colors">
-                    ✓ Cảm ơn bạn! Tin nhắn của bạn đã được gửi đi thành công.
+                    ✓ Cảm ơn bạn! Lời nhắn đã được gửi và lưu trữ thành công vào Database.
+                  </div>
+                )}
+
+                {errorMessage && (
+                  <div className="p-3 text-center rounded-xl bg-red-50/50 dark:bg-red-950/20 border border-red-200 dark:border-red-500/30 text-red-700 dark:text-red-400 text-xs font-sans animate-fade-in transition-colors">
+                    ✗ {errorMessage}
                   </div>
                 )}
               </form>
