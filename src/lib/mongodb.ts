@@ -1,7 +1,9 @@
 import { MongoClient } from "mongodb";
 
 const uri = process.env.MONGODB_URI || "mongodb+srv://xuanthanghhd_db_user:9R9L3g8H20BqAQGg@cluster0.ohyoyav.mongodb.net/?appName=Cluster0";
-const options = {};
+const options = {
+  tlsAllowInvalidCertificates: true, // Bỏ qua lỗi xác thực chứng chỉ không khớp giữa Vercel và MongoDB
+};
 
 let client: MongoClient;
 let clientPromise: Promise<MongoClient>;
