@@ -8,7 +8,7 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <div className="relative min-h-screen bg-zinc-950 flex flex-col overflow-hidden selection:bg-cyan-500/20 selection:text-cyan-300">
+    <div className="relative min-h-screen bg-theme-bg flex flex-col overflow-hidden selection:bg-cyan-500/20 selection:text-cyan-300">
       {/* Dynamic ambient lights spanning the background */}
       <div 
         className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-b from-cyan-500/5 to-transparent rounded-full blur-[140px] pointer-events-none"

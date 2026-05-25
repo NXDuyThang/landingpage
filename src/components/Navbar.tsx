@@ -68,7 +68,7 @@ export default function Navbar() {
               <li key={link.id}>
                 <a
                   href={`#${link.id}`}
-                  className={`relative py-1 text-zinc-650 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors uppercase tracking-wider text-[11px] ${
+                  className={`relative py-1 text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors uppercase tracking-wider text-[11px] ${
                     activeSection === link.id ? "text-cyan-600 dark:text-cyan-400 font-bold" : ""
                   }`}
                 >
@@ -127,7 +127,7 @@ export default function Navbar() {
                   <a
                     href={`#${link.id}`}
                     onClick={() => setMobileMenuOpen(false)}
-                    className={`block py-2 text-zinc-650 dark:text-zinc-400 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors uppercase tracking-wider text-xs ${
+                    className={`block py-2 text-zinc-600 dark:text-zinc-400 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors uppercase tracking-wider text-xs ${
                       activeSection === link.id ? "text-cyan-600 dark:text-cyan-400 font-semibold" : ""
                     }`}
                   >

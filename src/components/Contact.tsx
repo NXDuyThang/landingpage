@@ -97,7 +97,7 @@ export default function Contact() {
                   href={developerData.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group flex items-center gap-4 text-zinc-650 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors"
+                  className="group flex items-center gap-4 text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors"
                 >
                   <div className="w-10 h-10 rounded-xl bg-slate-100 dark:bg-zinc-950 border border-slate-200 dark:border-zinc-900 flex items-center justify-center group-hover:bg-cyan-50/50 group-hover:text-cyan-600 dark:group-hover:bg-cyan-950/20 dark:group-hover:text-cyan-400 group-hover:border-cyan-500/30 transition-all shrink-0">
                     <svg className="w-4.5 h-4.5 fill-current text-zinc-500 group-hover:text-cyan-600 dark:text-zinc-450 dark:group-hover:text-cyan-400 transition-colors" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -134,7 +134,7 @@ export default function Contact() {
                       onChange={handleChange}
                       placeholder="Nguyễn Văn A"
                       required
-                      className="w-full bg-slate-50 dark:bg-zinc-950 border border-slate-200 dark:border-zinc-850 text-zinc-900 dark:text-white text-sm rounded-xl px-4 py-3 placeholder-zinc-400 dark:placeholder-zinc-700 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500/30 transition-all font-sans"
+                      className="w-full bg-slate-50 dark:bg-zinc-950 border border-slate-200 dark:border-zinc-800 text-zinc-900 dark:text-white text-sm rounded-xl px-4 py-3 placeholder-zinc-400 dark:placeholder-zinc-700 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500/30 transition-all font-sans"
                     />
                   </div>
                   <div>
@@ -149,7 +149,7 @@ export default function Contact() {
                       onChange={handleChange}
                       placeholder="email@congty.com"
                       required
-                      className="w-full bg-slate-50 dark:bg-zinc-950 border border-slate-200 dark:border-zinc-850 text-zinc-900 dark:text-white text-sm rounded-xl px-4 py-3 placeholder-zinc-400 dark:placeholder-zinc-700 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500/30 transition-all font-sans"
+                      className="w-full bg-slate-50 dark:bg-zinc-950 border border-slate-200 dark:border-zinc-800 text-zinc-900 dark:text-white text-sm rounded-xl px-4 py-3 placeholder-zinc-400 dark:placeholder-zinc-700 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500/30 transition-all font-sans"
                     />
                   </div>
                 </div>
@@ -165,7 +165,7 @@ export default function Contact() {
                     value={formState.subject}
                     onChange={handleChange}
                     placeholder="Hợp tác phát triển hệ thống..."
-                    className="w-full bg-slate-50 dark:bg-zinc-950 border border-slate-200 dark:border-zinc-850 text-zinc-900 dark:text-white text-sm rounded-xl px-4 py-3 placeholder-zinc-400 dark:placeholder-zinc-700 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500/30 transition-all font-sans"
+                    className="w-full bg-slate-50 dark:bg-zinc-950 border border-slate-200 dark:border-zinc-800 text-zinc-900 dark:text-white text-sm rounded-xl px-4 py-3 placeholder-zinc-400 dark:placeholder-zinc-700 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500/30 transition-all font-sans"
                   />
                 </div>
 
@@ -181,7 +181,7 @@ export default function Contact() {
                     onChange={handleChange}
                     placeholder="Hãy mô tả ngắn gọn về dự án hoặc yêu cầu hợp tác của bạn..."
                     required
-                    className="w-full bg-slate-50 dark:bg-zinc-950 border border-slate-200 dark:border-zinc-850 text-zinc-900 dark:text-white text-sm rounded-xl px-4 py-3 placeholder-zinc-400 dark:placeholder-zinc-700 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500/30 transition-all font-sans resize-none"
+                    className="w-full bg-slate-50 dark:bg-zinc-950 border border-slate-200 dark:border-zinc-800 text-zinc-900 dark:text-white text-sm rounded-xl px-4 py-3 placeholder-zinc-400 dark:placeholder-zinc-700 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500/30 transition-all font-sans resize-none"
                   />
                 </div>
 

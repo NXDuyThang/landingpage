@@ -82,7 +82,7 @@ export default function Hero() {
               className="font-sans font-extrabold text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight tracking-tight mb-4"
             >
               <span className="text-zinc-950 dark:text-white block transition-colors">Nguyễn Xuân</span>
-              <span className="bg-gradient-to-r from-cyan-650 via-teal-505 to-emerald-600 dark:from-cyan-400 dark:via-teal-400 dark:to-emerald-400 bg-clip-text text-transparent block">
+              <span className="bg-gradient-to-r from-cyan-600 via-teal-500 to-emerald-600 dark:from-cyan-400 dark:via-teal-400 dark:to-emerald-400 bg-clip-text text-transparent block">
                 Duy Thắng
               </span>
             </motion.h1>
@@ -112,13 +112,13 @@ export default function Hero() {
             <motion.div variants={itemVariants} className="flex flex-wrap gap-4 w-full sm:w-auto">
               <a
                 href={developerData.cvUrl}
-                className="shimmer-btn w-full sm:w-auto text-center bg-gradient-to-r from-cyan-550 to-emerald-550 hover:from-cyan-650 hover:to-emerald-650 text-white dark:text-zinc-950 font-bold text-sm px-8 py-4 rounded-xl transition-all shadow-lg shadow-cyan-500/10 dark:shadow-cyan-950/20"
+                className="shimmer-btn w-full sm:w-auto text-center bg-gradient-to-r from-cyan-500 to-emerald-500 hover:from-cyan-600 hover:to-emerald-600 text-white dark:text-zinc-950 font-bold text-sm px-8 py-4 rounded-xl transition-all shadow-lg shadow-cyan-500/10 dark:shadow-cyan-950/20"
               >
                 Xem CV của tôi
               </a>
               <a
                 href="#contact"
-                className="w-full sm:w-auto text-center border border-zinc-350 dark:border-zinc-800 bg-zinc-200/20 dark:bg-zinc-900/40 text-zinc-700 dark:text-zinc-200 hover:text-zinc-950 dark:hover:text-white hover:border-cyan-500/40 hover:bg-zinc-300/40 dark:hover:bg-zinc-900/80 font-semibold text-sm px-8 py-4 rounded-xl transition-all flex items-center justify-center gap-2"
+                className="w-full sm:w-auto text-center border border-zinc-300 dark:border-zinc-800 bg-zinc-200/20 dark:bg-zinc-900/40 text-zinc-700 dark:text-zinc-200 hover:text-zinc-950 dark:hover:text-white hover:border-cyan-500/40 hover:bg-zinc-300/40 dark:hover:bg-zinc-900/80 font-semibold text-sm px-8 py-4 rounded-xl transition-all flex items-center justify-center gap-2"
               >
                 Liên hệ <Mail className="w-4 h-4 text-cyan-600 dark:text-cyan-400" />
               </a>

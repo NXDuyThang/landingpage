@@ -50,7 +50,7 @@ export default function Projects() {
             <h2 className="font-sans font-extrabold text-3xl sm:text-4xl text-zinc-900 dark:text-white tracking-tight transition-colors">
               Sản phẩm nổi bật
             </h2>
-            <p className="text-zinc-655 dark:text-zinc-400 text-sm max-w-xl leading-relaxed transition-colors">
+            <p className="text-zinc-600 dark:text-zinc-400 text-sm max-w-xl leading-relaxed transition-colors">
               Giải pháp thực tế giúp nâng cao năng suất làm việc, bảo mật dữ liệu cá nhân và mang đến trải nghiệm người dùng mượt mà.
             </p>
           </div>
@@ -117,7 +117,7 @@ export default function Projects() {
                   {/* Detailed Description */}
                   {project.detailedDescription && (
                     <div className="p-3 rounded-lg bg-slate-100/80 dark:bg-zinc-950/80 border border-slate-200 dark:border-zinc-900/60 mb-6 transition-colors">
-                      <p className="text-[11px] text-zinc-500 dark:text-zinc-450 font-mono leading-relaxed transition-colors">
+                      <p className="text-[11px] text-zinc-500 dark:text-zinc-400 font-mono leading-relaxed transition-colors">
                         {project.detailedDescription}
                       </p>
                     </div>
@@ -130,7 +130,7 @@ export default function Projects() {
                     {project.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="text-[9px] bg-cyan-50/60 dark:bg-cyan-950/10 border border-cyan-200/60 dark:border-cyan-950/30 text-cyan-750 dark:text-cyan-400/80 px-2 py-1 rounded font-mono transition-colors"
+                        className="text-[9px] bg-cyan-50/60 dark:bg-cyan-950/10 border border-cyan-200/60 dark:border-cyan-950/30 text-cyan-700 dark:text-cyan-400/80 px-2 py-1 rounded font-mono transition-colors"
                       >
                         {tag}
                       </span>

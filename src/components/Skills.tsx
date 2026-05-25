@@ -55,7 +55,7 @@ export default function Skills() {
           <h2 className="font-sans font-extrabold text-3xl sm:text-4xl text-zinc-900 dark:text-white tracking-tight transition-colors">
             Những gì tôi có thể làm cho bạn
           </h2>
-          <p className="text-zinc-650 dark:text-zinc-400 text-sm leading-relaxed max-w-xl mx-auto transition-colors">
+          <p className="text-zinc-600 dark:text-zinc-400 text-sm leading-relaxed max-w-xl mx-auto transition-colors">
             Tôi sử dụng các công nghệ hiện đại để xây dựng những sản phẩm chất lượng cao, vận hành ổn định và mang lại giá trị thực sự cho người dùng.
           </p>
         </div>
@@ -94,7 +94,7 @@ export default function Skills() {
                     {group.skills.map((skill) => (
                       <span
                         key={skill}
-                        className="text-xs bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 text-zinc-700 dark:text-zinc-300 hover:text-cyan-650 dark:hover:text-cyan-400 hover:border-cyan-500/30 px-3 py-1.5 rounded-lg transition-all duration-300 font-mono"
+                        className="text-xs bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 text-zinc-700 dark:text-zinc-300 hover:text-cyan-600 dark:hover:text-cyan-400 hover:border-cyan-500/30 px-3 py-1.5 rounded-lg transition-all duration-300 font-mono"
                       >
                         {skill}
                       </span>
@@ -103,7 +103,7 @@ export default function Skills() {
                 </div>
 
                 {/* Footer element inside card to emphasize technical aesthetic */}
-                <div className="mt-8 pt-4 border-t border-zinc-200 dark:border-zinc-900 flex items-center justify-between text-[10px] font-mono text-zinc-550 dark:text-zinc-500 transition-colors">
+                <div className="mt-8 pt-4 border-t border-zinc-200 dark:border-zinc-900 flex items-center justify-between text-[10px] font-mono text-zinc-500 dark:text-zinc-500 transition-colors">
                   <span className="flex items-center gap-1">
                     <Sparkles className="w-3 h-3 text-cyan-600 dark:text-cyan-400" /> Professional
                   </span>

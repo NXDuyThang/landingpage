@@ -17,7 +17,7 @@ export default function Footer() {
         
         {/* Left: Brand copyright */}
         <div className="flex flex-col items-center sm:items-start gap-1">
-          <p className="text-sm text-zinc-550 dark:text-zinc-400 font-sans transition-colors">
+          <p className="text-sm text-zinc-500 dark:text-zinc-400 font-sans transition-colors">
             © {currentYear} <span className="font-semibold text-zinc-800 dark:text-zinc-200">{developerData.name}</span>. All rights reserved.
           </p>
           <p className="text-[10px] text-zinc-500 font-mono transition-colors">
@@ -29,7 +29,7 @@ export default function Footer() {
         <a
           href="#hero"
           onClick={handleScrollToTop}
-          className="w-10 h-10 rounded-full border border-slate-300 dark:border-zinc-850 bg-slate-200/30 dark:bg-zinc-900/30 hover:bg-slate-200/70 dark:hover:bg-zinc-800 text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white transition-all flex items-center justify-center shrink-0 group"
+          className="w-10 h-10 rounded-full border border-slate-300 dark:border-zinc-800 bg-slate-200/30 dark:bg-zinc-900/30 hover:bg-slate-200/70 dark:hover:bg-zinc-800 text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white transition-all flex items-center justify-center shrink-0 group"
           aria-label="Back to top"
         >
           <ArrowUp className="w-4 h-4 group-hover:-translate-y-0.5 transition-transform" />
